@@ -1,27 +1,27 @@
 class Node:
-    def __init__(self, menu_name, price):
-        self.menu_name = menu_name
-        self.price = price
+    def __init__(self, nama_menu, harga):
+        self.nama_menu = nama_menu
+        self.harga = harga
         self.next_node = None  # Perubahan nama dari 'next' ke 'next_node' untuk menghindari konflik dengan kata kunci 'next'
 
 class LinkedList:
     def __init__(self):
         self.head = None
 
-    def add_order(self, menu_name, price):
-        new_order = Node(menu_name, price)
+    def add_order(self, nama_menu, harga):
+        order_baru = Node(nama_menu, harga)
         if not self.head:
-            self.head = new_order
+            self.head = order_baru
         else:
             current = self.head
             while current.next_node:
                 current = current.next_node
-            current.next_node = new_order
+            current.next_node = order_baru
 
     def display_orders(self):
         current = self.head
         while current:
-            print(f"{current.menu_name} - {current.price}")
+            print(f"{current.nama_menu} - {current.harga}")
             current = current.next_node
 
     def calculate_total(self):
@@ -33,7 +33,7 @@ class LinkedList:
         return total
 
 # Inisialisasi linked list untuk pesanan Miexue
-miexue_orders = LinkedList()
+pesanan_miexue = LinkedList()
 
 # Menu Miexue
 menu_miexue = {
