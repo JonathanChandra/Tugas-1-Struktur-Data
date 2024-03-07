@@ -28,7 +28,7 @@ class LinkedList:
         total = 0
         current = self.head
         while current:
-            total += current.price
+            total += current.harga
             current = current.next_node
         return total
 
@@ -47,17 +47,17 @@ menu_miexue = {
 # Fungsi untuk menambah pesanan ke keranjang
 def tambah_pesanan(menu, jumlah):
     for _ in range(jumlah):
-        miexue_orders.add_order(menu, menu_miexue[menu])
+        pesanan_miexue.add_order(menu, menu_miexue[menu])
     print(f"{jumlah} {menu} telah ditambahkan ke keranjang.")
 
 # Fungsi untuk menampilkan pesanan yang sudah ditambahkan
 def tampilkan_pesanan():
     print("Pesanan Anda:")
-    miexue_orders.display_orders()
+    pesanan_miexue.display_orders()
 
 # Fungsi untuk menghitung jumlah harga yang dibayarkan
 def hitung_total_harga():
-    total_harga = miexue_orders.calculate_total()
+    total_harga = pesanan_miexue.calculate_total()
     print(f"Total harga yang harus dibayarkan: {total_harga} Rupiah.")
 
 # Contoh penggunaan
