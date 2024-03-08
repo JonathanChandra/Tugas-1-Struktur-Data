@@ -23,7 +23,7 @@ class LinkedList:
 
     def display_orders(self):
         temp = self.head
-        while temp: # "Selama temp memiliki nilai (tidak None)
+        while temp: # Selama temp memiliki nilai (tidak None)
             print(f"{temp.nama_menu} - {temp.harga}")  #Tampilkan nama menu dan harga dari node sekarang
             temp = temp.next_node # Perbarui temp untuk ke node berikutnya
 
