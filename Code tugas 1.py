@@ -35,42 +35,7 @@ class LinkedList:
             temp = temp.next_node
         return total
 
-# Inisialisasi linked list untuk pesanan Miexue
-pesanan_miexue = LinkedList()
 
-# Menu Miexue
-menu_miexue = {
-    "Miexue Ice Cream": 5000,
-    "Boba Shake": 16000,
-    "Mi Sundae": 14000,
-    "Mi Ganas": 11000,
-    "Creamy Mango Boba": 22000
-}
-
-# Menampilkan semua menu
-def tampilkan_menu():
-    print("Daftar Menu:")
-    for menu, harga in menu_miexue.items():
-        print(f"{menu} - {harga} Rupiah")
-
-# Menambah pesanan ke keranjang
-def tambah_pesanan(menu, jumlah):
-    for _ in range(jumlah):
-        pesanan_miexue.add_order(menu, menu_miexue[menu])
-    print(f"{jumlah} {menu} telah ditambahkan ke keranjang.")
-
-# Menampilkan pesanan yang sudah ditambahkan
-def tampilkan_pesanan():
-    print("Pesanan Anda:")
-    pesanan_miexue.display_orders()
-
-# Menghitung jumlah harga yang dibayarkan
-def hitung_total_harga():
-    total_harga = pesanan_miexue.calculate_total()
-    print(f"Total harga yang harus dibayarkan: {total_harga} Rupiah.")
-
-# Menampilkan semua menu saat program dimulai
-tampilkan_menu()
 
 # Meminta input dari pengguna untuk memilih menu
 while True:
