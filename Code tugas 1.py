@@ -77,8 +77,6 @@ def hitung_total_harga():
 # Menampilkan semua menu saat program dimulai
 tampilkan_menu()
 
-
-
 # Meminta input dari pengguna untuk memilih menu
 while True:
     pilihan_menu = input("Silakan pilih menu (ketik 'selesai' untuk lanjut): ").strip()
